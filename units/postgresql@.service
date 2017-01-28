@@ -1,0 +1,9 @@
+[Unit]
+Description=PostgreSQL: %I
+
+[Service]
+# SystemDocker configuration
+Environment='DOCKER_IMAGE=sameersbn/postgresql'
+
+# Setup the volume
+Environment='DOCKER_VOLUME_VAR_LIB_POSTGRESQL=/srv/docker/postgresql/instance/%i/data:/var/lib/postgresql'
